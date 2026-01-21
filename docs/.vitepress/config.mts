@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "RMS 汽⻋陪练全链路智慧预约管理系统",
+  title: "汽⻋陪练全链路智慧预约管理系统",
   description: "学员预约、教练执教、后台管理一体化系统",
   themeConfig: {
     logo: '/logo.svg',

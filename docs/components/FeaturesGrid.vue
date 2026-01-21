@@ -1,85 +1,69 @@
 <template>
-  <div class="features-grid">
-    <div v-for="feature in features" :key="feature.title" class="feature-card">
-      <h3>{{ feature.title }}</h3>
-      <ul>
-        <li v-for="item in feature.items" :key="item">{{ item }}</li>
-      </ul>
+	<h2>面向汽车陪练企业需求<br/>深度定制的 7 大核心功能</h2>
+    <div class="feature-list">
+    <div
+      v-for="(feature, index) in features"
+      :key="index"
+      class="feature-item"
+    >
+      <h4 class="title">{{ feature.title }}</h4>
+      <p class="details">{{ feature.details }}</p>
     </div>
   </div>
 </template>
 
 <script setup>
-const features = [
-  {
-    title: '🤖 AI 替代人工客服',
-    items: [
-      '7 × 24 小时智能应答，全年无休',
-      '承担前期咨询、课程介绍、价格说明',
-      '自动识别潜在客户，持续提升新用户转化率'
-    ]
-  },
-  {
-    title: '📚 标准化 / 定制化课程体系',
-    items: [
-      'AI 自动向学员介绍课程内容与学习路径',
-      '根据学员情况精准推荐课程方案',
-      '显著提升下单效率与成交转化率'
-    ]
-  },
-  {
-    title: '🧠 智能调度系统',
-    items: [
-      '教练、车辆、订单统一调度',
-      '冗余订单智能分配，避免资源浪费',
-      '最大化减少车辆与教练空置率'
-    ]
-  },
-  {
-    title: '🗺 地图定位对接系统',
-    items: [
-      '教练与学员精准定位，实时可见',
-      '上车流程清晰规范，减少沟通成本',
-      '有效降低纠纷与服务争议'
-    ]
-  },
-  {
-    title: '🎓 电子化教学与学习反馈',
-    items: [
-      '课程全过程电子化记录',
-      '学习轨迹清晰可回溯',
-      '服务标准统一、教学透明'
-    ]
-  },
-  {
-    title: '🌐 多端数据全面打通',
-    items: [
-      '外部平台 / PC 管理端 / 手机端',
-      '数据实时同步，避免重复操作',
-      '统一视角掌控企业运营全局'
-    ]
-  },
-  {
-    title: '💰 财务结算与绩效统计',
-    items: [
-      '自动化财务结算，减少人工对账',
-      '教练绩效清晰可查',
-      '客户生命周期数据完整留存'
-    ]
-  }
-]
+import { ref } from 'vue'
+
+const features = ref([
+  { title: 'AI 客服自动接待（24 小时上班）', details: '回答咨询、引导下单、筛选高意向客户 减少人工客服 提升新客转化率' },
+  { title: '标准 / 定制 课程体系', details: 'AI 向用户介绍课程与差异 AI完善定制课程 提高成交效率' },
+  { title: '智能调度系统（人、车、订单自动匹配）', details: '高峰期不堵，低谷期不闲置，最大化利用车辆和教练资源' },
+  { title: '地图定位 + 教练对接', details: '自动匹配附近教练，减少沟通成本 员工少操心 客户体验更顺' },
+  { title: '电子化教学记录 & 学习反馈', details: '教学过程全记录、可回溯减少纠纷，提升专业形象' },
+  { title: '多端打通（电脑 / 手机 / 外部平台）', details: '一个后台管所有订单 告别重复录入' },
+  { title: '财务结算 & 经营数据看板', details: '提成、利润、客户生命周期一目了然 让老板第一次真正“看懂账”' },
+])
 </script>
 
 <style scoped>
-.features-grid {
+.feature-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 12px;
+  padding: 12px;
 }
-.feature-card {
-  background: #f9f9f9;
-  padding: 15px;
-  border-radius: 8px;
+
+.feature-item {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 10px 12px;
+  background-color: #f9f9f9;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 4px;
+  color: #333;
+}
+
+.details {
+  font-size: 12px;
+  color: #666;
+  margin: 0px;
+
+}
+
+@media (max-width: 480px) {
+  .feature-list {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .feature-item {
+    padding: 8px 10px;
+  }
 }
 </style>

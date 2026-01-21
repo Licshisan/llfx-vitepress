@@ -159,4 +159,19 @@ function scrollToBottom() {
   padding: 0 15px;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .chat-widget {
+    right: 12px;
+  }
+
+  .chat-box {
+    width: calc(100vw - 24px);   /* 左右各留 12px */
+    max-width: 420px;            /* 防止大屏手机太宽 */
+    height: 65vh;                /* 高度适中，不压屏 */
+    max-height: 520px;
+    border-radius: 10px;
+  }
+}
+
 </style>
