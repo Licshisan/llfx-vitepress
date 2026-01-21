@@ -23,6 +23,12 @@ hero:
       text: 演示
 ---
 
+<style>
+  h2{
+    border-top: none !important;
+  }
+</style>
+
 <script setup>
 import PainPoints from './components/PainPoints.vue'
 import FeaturesGrid from './components/FeaturesGrid.vue'

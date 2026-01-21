@@ -1,1 +1,0 @@
-import{_ as t,c as r,o as l,b1 as o}from"./chunks/framework.BVvagWp4.js";const p=JSON.parse('{"title":"三端联动解决方案","description":"","frontmatter":{},"headers":[],"relativePath":"solution.md","filePath":"solution.md"}'),e={name:"solution.md"};function n(i,a,s,c,d,g){return l(),r("div",null,[...a[0]||(a[0]=[o("",7)])])}const _=t(e,[["render",n]]);export{p as __pageData,_ as default};

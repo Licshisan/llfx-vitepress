@@ -39,6 +39,7 @@ const features = ref([
   border-radius: 6px;
   padding: 10px 12px;
   background-color: #f9f9f9;
+  min-height: 100px;
 }
 
 .title {
