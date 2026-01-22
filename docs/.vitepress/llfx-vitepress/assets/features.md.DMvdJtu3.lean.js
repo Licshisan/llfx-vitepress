@@ -1,0 +1,1 @@
+import{_ as e,c as r,o as t,b1 as s}from"./chunks/framework.BVvagWp4.js";const p=JSON.parse('{"title":"核心功能","description":"","frontmatter":{},"headers":[],"relativePath":"features.md","filePath":"features.md"}'),n={name:"features.md"};function i(o,a,l,d,h,c){return t(),r("div",null,[...a[0]||(a[0]=[s("",7)])])}const f=e(n,[["render",i]]);export{p as __pageData,f as default};
